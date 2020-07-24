@@ -13,6 +13,7 @@ module.exports = {
   insertComment,
 };
 
+
 function find() {
   return db('posts');
 }
@@ -24,7 +25,7 @@ function findById(id) {
 function insert(post) {
   return db('posts')
     .insert(post, 'id')
-    .then(ids => ({ id: ids[0] }));
+    .then(ids => ({ id: ids[0] }))
 }
 
 function update(id, post) {
